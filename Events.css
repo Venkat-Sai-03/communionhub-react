@@ -1,0 +1,13 @@
+.evntadd-btn{
+    background-color: aqua;
+}
+
+
+@media (max-width: 768px) {
+  
+    .evntadd-btn{
+        background-color: rgb(0, 255, 42);
+        margin-left: -500px;
+        float: inline-start;
+    }
+}

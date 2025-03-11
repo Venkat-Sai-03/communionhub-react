@@ -1,0 +1,116 @@
+    .navbar {
+        width: 100%;
+        padding: 10px;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        background-color: rgb(86, 197, 248);
+        z-index: 1000;
+        height: 60px;
+    }
+
+    .logo {
+        width: 300px;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        width: 60%;
+        font-weight: bold;
+    }
+
+    .nav-links a,
+    .nav-links select {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        white-space: nowrap;
+        background-color: transparent;
+        border: none;
+        font-weight: bold;
+    }
+
+    .nav-links a:hover,
+    .nav-links select:hover {
+        color: white;
+        border-bottom: 2px solid black;
+    }
+
+    .nav-links option {
+        color: black;
+    }
+
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 1200px) {
+        .logo {
+            width: 250px;
+        }
+
+        .nav-links {
+            width: 70%;
+            gap: 15px;
+        }
+
+        .nav-links a,
+        .nav-links select {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .logo {
+            width: 200px;
+        }
+
+        .nav-links {
+            width: 75%;
+        }
+
+        .nav-links a,
+        .nav-links select {
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+            margin-right: 25px;
+        }
+
+        .nav-links {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: rgb(86, 197, 248);
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            display: none;
+            padding: 15px 0;
+        }
+
+        .nav-links.open {
+            display: flex;
+        }
+    }
+
+    body {
+        overflow-x: hidden;
+    }
